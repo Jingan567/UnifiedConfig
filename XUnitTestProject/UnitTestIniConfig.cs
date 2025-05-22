@@ -29,7 +29,7 @@ Interval = 5
             Assert.Equal("6", config.GetValue("Default", "Interval"));
         }
 
-        [Fact(DisplayName ="xml test")]
+        [Fact(DisplayName = "xml test")]
         public void Test2()
         {
             ConfigManager config = new ConfigManager("yard.xml", "yard");
