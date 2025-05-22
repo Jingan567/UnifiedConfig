@@ -26,12 +26,14 @@ namespace UnifiedConfig
 
         /// <summary>
         /// Get or set the value by findingPath.
+        /// 通过节点路径
         /// </summary>
         /// <param name="findingPath"></param>
         /// <returns></returns>
         public abstract string this[string findingPath] { get; set; }
         /// <summary>
         /// Get the string value of the path
+        /// 获取路径的值
         /// <para>e.g. GetValue("config","master")</para>
         /// </summary>
         /// <param name="keys">path strings</param>
@@ -39,6 +41,7 @@ namespace UnifiedConfig
         public abstract string GetValue(params string[] keys);
         /// <summary>
         /// Set the value by path
+        /// 通过路径设置值
         /// <para>e.g. SetValue("True","config","master")</para>
         /// </summary>
         /// <param name="value">value</param>
@@ -47,6 +50,7 @@ namespace UnifiedConfig
         public abstract bool SetValue(string value, params string[] keys);
         /// <summary>
         /// Save the config into file
+        /// 保存配置到文件
         /// </summary>
         /// <param name="filepath">full file path. The file path where the config is used as default.</param>
         public abstract void Save(string filepath = null);
